@@ -21,8 +21,11 @@ export default function EntryForm() {
         // Mapping fields to Google Form Entry IDs
         submissionData.append('entry.1480415295', name); // Name
         submissionData.append('entry.1718488684', formData['email'] || ''); // Email
+        submissionData.append('entry.1044711038', formData['phone'] || ''); // Phone
+        submissionData.append('entry.1220682221', formData['city'] || ''); // City
+        submissionData.append('entry.160058162', formData['wanted_products'] || ''); // Wanted Products
+        submissionData.append('entry.1763557649', formData['products'] || ''); // Products
         submissionData.append('entry.1206532077', formData['team'] || ''); // Team
-        submissionData.append('entry.1763557649', formData['snack'] || ''); // Snack
         
         // Google Form Hidden Fields
         submissionData.append('fvv', '1');
@@ -93,7 +96,7 @@ export default function EntryForm() {
             transition={{ delay: 0.2 }}
             className="text-[#9c7449] dark:text-primary/70 text-lg"
           >
-            Tell us about your habits for a chance to win the Golden Ticket.
+            Tell us about your habits for a chance to win the chance of a lifetime.
           </motion.p>
         </div>
         
@@ -121,7 +124,7 @@ export default function EntryForm() {
             </div>
 
             {giveawayQuestions.map((q) => {
-                const isFullWidth = q.type === 'email';
+                const isFullWidth = q.type === 'email' || q.type === 'textarea';
                 return (
                     <div key={q.id} className={`flex flex-col gap-3 ${isFullWidth ? 'md:col-span-2' : ''}`}>
                          <label className="flex flex-col">
@@ -140,6 +143,14 @@ export default function EntryForm() {
                                         ))}
                                     </select>
                                 </div>
+                            ) : q.type === 'textarea' ? (
+                                <textarea
+                                    className="form-input flex w-full rounded-lg text-[#1c150d] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#e8dcce] dark:border-white/20 bg-white dark:bg-zinc-800 min-h-[120px] placeholder:text-[#9c7449] p-4 transition-all resize-y"
+                                    placeholder={q.placeholder}
+                                    required
+                                    value={formData[q.id] || ''}
+                                    onChange={(e) => handleChange(q.id, e.target.value)}
+                                />
                             ) : (
                                 <input 
                                     className="form-input flex w-full rounded-lg text-[#1c150d] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#e8dcce] dark:border-white/20 bg-white dark:bg-zinc-800 h-14 placeholder:text-[#9c7449] p-4 transition-all"

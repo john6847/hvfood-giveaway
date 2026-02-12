@@ -27,7 +27,7 @@ export default function Hero() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]"
             >
-                The Ultimate Goal: Fuel Your Passion, Win the World Cup Experience.
+                Because Every Fan Deserves A Victory. Win the World Cup Experience
             </motion.h1>
             <motion.p 
                 initial={{ opacity: 0 }}
@@ -35,7 +35,7 @@ export default function Hero() {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="text-white/90 text-lg md:text-xl font-medium max-w-2xl"
             >
-                Organic nutrition meets the beautiful game. Enter for a chance to win the Golden Ticket and a year of healthy living.
+                Passion fuels our culture. Enter for a chance to win tickets to the World Cup
             </motion.p>
             <motion.div 
                 initial={{ opacity: 0, y: 20 }}

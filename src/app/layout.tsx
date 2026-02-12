@@ -10,7 +10,7 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: 'Horizon Vert: The Ultimate Goal Giveaway',
-  description: 'Enter for a chance to win the Golden Ticket and a year of healthy living.',
+  description: 'Enter for a chance to win the chance of a lifetime and a year of healthy living.',
 }
 
 export default function RootLayout({

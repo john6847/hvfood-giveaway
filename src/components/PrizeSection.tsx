@@ -33,14 +33,14 @@ export default function PrizeSection() {
             <div className="p-8 md:p-12 flex flex-col items-center text-center gap-6 relative z-10">
               <div className="flex flex-col items-center gap-2">
                 <span className="material-symbols-outlined text-primary text-5xl mb-2">confirmation_number</span>
-                <h3 className="text-[#1c150d] dark:text-white text-3xl md:text-4xl font-black uppercase tracking-tight">The Golden Ticket</h3>
+                <h3 className="text-[#1c150d] dark:text-white text-3xl md:text-4xl font-black uppercase tracking-tight">The Chance of a Lifetime</h3>
               </div>
               <p className="text-[#9c7449] dark:text-white/70 text-lg md:text-xl leading-relaxed max-w-lg">
-                Two Category A tickets to the World Cup Final. Includes business class travel and 5-star luxury accommodation for 4 nights.
+                Two tickets to the World Cup to watch Haiti vs Scotland play
               </p>
               <div className="mt-4 pt-6 w-full border-t border-[#f4ede7] dark:border-white/10 flex flex-col gap-2">
                 <span className="text-sm uppercase tracking-widest text-primary/80 font-bold">Total Value</span>
-                <span className="text-[#1c150d] dark:text-white text-3xl font-black">$15,000</span>
+                <span className="text-[#1c150d] dark:text-white text-3xl font-black">$4,000</span>
               </div>
             </div>
           </motion.div>
